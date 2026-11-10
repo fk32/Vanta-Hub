@@ -70,27 +70,27 @@ export default function Home() {
     );
   }
 
-  // 3. PROFILE
+  // 3. PROFILE - AGGIUSTATO
   if (view === "profile") {
     return (
       <main className="min-h-screen bg-[#080808] text-white pb-10">
-        <div className="relative h-36 bg-gradient-to-r from-[#D4AF37] via-[#8a6d1a] to-black">
-          <button onClick={() => setView("home")} className="absolute top-4 left-4 bg-black/40 px-3 py-1.5 rounded-full text-xs">Back</button>
+        <div className="relative h-24 bg-gradient-to-r from-[#D4AF37] via-[#8a6d1a] to-black">
+          <button onClick={() => setView("home")} className="absolute top-4 left-4 bg-black/40 px-3 py-1.5 rounded-full text-xs z-10">Back</button>
           <p className="absolute bottom-3 right-4 text-[10px] tracking-[0.3em] text-white/60 font-bold">VANTA • SEASON 3</p>
         </div>
-        <div className="px-4 -mt-10">
+        <div className="px-4 mt-4">
           <div className="bg-[#121212] border border-white/10 rounded-[24px] p-5">
-            <div className="flex justify-between items-start">
-              <div className="flex gap-3">
-                <div className="w-[72px] h-[72px] rounded-2xl bg-[#D4AF37] flex items-center justify-center font-black text-black text-3xl border-4 border-[#121212]">{initial}</div>
-                <div>
-                  <p className="text-[22px] font-black leading-tight">{name}</p>
-                  <div className="flex gap-1.5 mt-1.5"><span className="text-[10px] bg-[#D4AF37]/20 text-[#D4AF37] px-2 py-1 rounded-full font-bold">BRONZE</span><span className="text-[10px] bg-emerald-500/20 text-emerald-400 px-2 py-1 rounded-full font-bold">YOU</span></div>
+            <div className="flex justify-between items-start gap-3">
+              <div className="flex gap-3 min-w-0">
+                <div className="w-[68px] h-[68px] shrink-0 rounded-2xl bg-[#D4AF37] flex items-center justify-center font-black text-black text-3xl">{initial}</div>
+                <div className="min-w-0">
+                  <p className="text-[22px] font-black leading-tight truncate">{name}</p>
+                  <div className="flex gap-1.5 mt-2 flex-wrap"><span className="text-[10px] bg-[#D4AF37]/20 text-[#D4AF37] px-2 py-1 rounded-full font-bold">BRONZE</span><span className="text-[10px] bg-emerald-500/20 text-emerald-400 px-2 py-1 rounded-full font-bold">YOU</span></div>
                   <p className="text-xs text-gray-400 mt-2">{position}</p>
-                  <p className="text-sm mt-1 text-gray-200">{bio}</p>
+                  <p className="text-sm mt-1 text-gray-200 break-words">{bio}</p>
                 </div>
               </div>
-              <div className="text-right">
+              <div className="text-right shrink-0">
                 <p className="text-[10px] text-gray-500 font-bold">POINTS</p><p className="text-[28px] font-black text-[#D4AF37] leading-none">0</p>
                 <p className="text-[10px] text-gray-500 font-bold mt-3">MARKET VALUE</p><p className="font-bold">£0</p>
                 <button onClick={() => setView("login")} className="mt-2 text-[11px] bg-white/5 border border-white/10 px-3 py-1.5 rounded-full">Edit</button>
@@ -132,7 +132,6 @@ export default function Home() {
         <button onClick={() => setTab("rankings")} className={tab === "rankings" ? "bg-[#D4AF37] text-black font-black px-4 py-2 rounded-full text-xs" : "bg-white/5 text-gray-300 px-4 py-2 rounded-full text-xs"}>RANKINGS</button>
         <button onClick={() => setTab("transfers")} className={tab === "transfers" ? "bg-[#D4AF37] text-black font-black px-4 py-2 rounded-full text-xs" : "bg-white/5 text-gray-300 px-4 py-2 rounded-full text-xs"}>TRANSFERS</button>
       </div>
-
       {tab === "match" && (
         <section className="px-4"><div className="bg-[#1a1a1a] border border-white/10 rounded-[20px] p-5"><p className="text-[11px] text-[#D4AF37] font-bold">LIVE NOW</p><h2 className="text-xl font-black mt-1">Match Centre</h2><p className="text-gray-400 text-sm mt-1">No live matches right now.</p></div></section>
       )}
