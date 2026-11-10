@@ -70,13 +70,13 @@ export default function Home() {
     );
   }
 
-  // 3. PROFILE - AGGIUSTATO
+  // 3. PROFILE
   if (view === "profile") {
     return (
       <main className="min-h-screen bg-[#080808] text-white pb-10">
         <div className="relative h-24 bg-gradient-to-r from-[#D4AF37] via-[#8a6d1a] to-black">
           <button onClick={() => setView("home")} className="absolute top-4 left-4 bg-black/40 px-3 py-1.5 rounded-full text-xs z-10">Back</button>
-          <p className="absolute bottom-3 right-4 text-[10px] tracking-[0.3em] text-white/60 font-bold">VANTA • SEASON 3</p>
+          <p className="absolute bottom-3 right-4 text-[10px] tracking-[0.3em] text-white/60 font-bold">VANTA</p>
         </div>
         <div className="px-4 mt-4">
           <div className="bg-[#121212] border border-white/10 rounded-[24px] p-5">
@@ -109,7 +109,7 @@ export default function Home() {
           </div>
 
           <div className="bg-[#121212] rounded-[20px] p-4 mt-4">
-            <p className="font-bold text-sm">SEASON 3 — BY COMPETITION</p>
+            <p className="font-bold text-sm">BY COMPETITION</p>
             <div className="mt-4"><div className="flex justify-between text-sm"><span className="font-semibold">ESFL PREM</span><span className="text-xs text-gray-400">1 DCS · 82 G+A</span></div><div className="h-2 bg-white/10 rounded-full mt-2"><div className="h-2 bg-[#D4AF37] rounded-full w-full" /></div></div>
             <div className="mt-4"><div className="flex justify-between text-sm"><span className="font-semibold">CHAMPIONSHIP</span><span className="text-xs text-gray-400">0 DCS · 0 G+A</span></div><div className="h-2 bg-white/10 rounded-full mt-2"><div className="h-2 bg-white/20 rounded-full" style={{ width: "5%" }} /></div></div>
             <button className="w-full mt-5 bg-[#D4AF37] text-black font-black py-3.5 rounded-xl">View Full Career</button>
@@ -124,7 +124,7 @@ export default function Home() {
     <main className="min-h-screen bg-[#080808] text-white pb-28">
       <header className="py-4 text-center border-b border-white/10 relative">
         <button onClick={() => setView("home")} className="absolute left-4 text-gray-400">Back</button>
-        <h1 className="font-black">Vanta Hub</h1><p className="text-[11px] text-gray-500">Match Centre • Season 3</p>
+        <h1 className="font-black">Vanta Hub</h1><p className="text-[11px] text-gray-500">Match Centre</p>
       </header>
       <div className="flex gap-2 p-4">
         <button onClick={() => setTab("match")} className={tab === "match" ? "bg-[#D4AF37] text-black font-black px-4 py-2 rounded-full text-xs" : "bg-white/5 text-gray-300 px-4 py-2 rounded-full text-xs"}>MATCH</button>
