@@ -67,7 +67,7 @@ export default function Home() {
             <div className="w-16 h-16 rounded-xl bg-[#D4AF37] flex items-center justify-center font-black text-black text-2xl">{initial}</div>
             <div>
               <p className="text-xl font-black">{name} <span className="text-xs bg-[#D4AF37]/20 text-[#D4AF37] px-2 py-1 rounded-full">Bronze</span> <span className="text-xs bg-emerald-500/20 text-emerald-400 px-2 py-1 rounded-full">You</span></p>
-              <p className="text-xs text-gray-400 mt-1">● {position} &nbsp; 👁 4 views</p>
+              <p className="text-xs text-gray-400 mt-1">● {position} &nbsp; 👁 0 views</p>
               <p className="text-sm mt-1">{bio}</p>
             </div>
           </div>
